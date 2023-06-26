@@ -1,10 +1,214 @@
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 100px;
+}
 .App {
+  box-sizing: border-box;
+  margin: 0 auto;
   text-align: center;
+  background-color: #eff8fa;
+  animation: changeColor 5s infinite alternate linear;
+
+  /* background-image: url("./img/uah.png");
+  background-repeat: repeat-y;
+  background-size: 15%; */
+  /* opacity: 0.8; */
+}
+.blob-effect {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blob-effect span:nth-child(1) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #a9ff68;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: rotate-blob 5s linear infinite;
+}
+
+.blob-effect:hover span:nth-child(1) {
+  background: #d76bb1;
+  border: none;
+}
+
+.blob-effect span:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #a9ff68;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: rotate-blob 4s linear infinite;
+}
+
+.blob-effect:hover span:nth-child(2) {
+  background: #f192d0;
+  border: none;
+}
+
+.blob-effect span:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #a9ff68;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: rotate-blob2 10s linear infinite;
+}
+
+.blob-effect:hover span:nth-child(3) {
+  background: #f06ec294;
+  border: none;
+}
+#aust {
+  animation-iteration-count: infinite;
+  animation-name: running;
+  animation-duration: 5s;
+  border-radius: 10%;
+  /* display: block; */
+}
+@keyframes running {
+  from {
+    transform: translateY(0%);
+  }
+  /* 50% {
+    mask-repeat: repeat-y;
+  } */
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes rotate-blob {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-blob2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.div-container {
+  position: relative;
+  padding: 40px 60px;
+  color: #fff;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 10000;
+}
+
+.div-container p {
+  color: #fff;
+}
+
+.div-container a {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  padding: 6px 18px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+
+.div-container a:hover {
+  background: #fff;
+  color: #333;
+}
+#nameBand {
+  border-radius: 120px;
+  width: 60%;
+}
+
+/* #runningAnimation {
+  position: relative;
+  background-repeat: round;
+} */
+#logo {
+  width: 10%;
+  height: 10%;
+  animation: flip 2s infinite;
+  border-radius: 50%;
+}
+#uah {
+  width: 100%;
+  height: 100%;
+  /* mask-repeat: repeat-x; */
+  /* position: relative; */
+  animation-name: reverse;
+  animation-iteration-count: infinite;
+
+  animation-duration: 5s;
+  border-radius: 10%;
+  background-image: url("./img/uah.png");
+  background-repeat: repeat;
+  /* animation-duration: 3s; */
+  /* animation-iteration-count: 3; */
+  /* animation-fill-mode: both; */
+  /* animation-play-state: running;
+  animation-play-state: paused; */
+  /* background-size: 15%; */
+}
+@keyframes reverse {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes changeColor {
+  0% {
+    background-color: #a1ddee;
+  }
+  25% {
+    background-color: rgb(220, 183, 238);
+  }
+  50% {
+    background-color: rgb(248, 215, 203);
+  }
+  75% {
+    background-color: rgb(219, 243, 195);
+  }
+  100% {
+    background-color: rgb(213, 238, 247);
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(100px);
+  }
+  to {
+    transform: perspective(100px) rotateY(180deg);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,7 +216,38 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+#dollar {
+  width: 200px;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  /* animation-play-state: paused; */
+}
+/* #dollar:hover {
+  animation-play-state: running;
+} */
+@keyframes rotate {
+  from {
+    /*
+      Identity matrix is used as basis here.
+      The matrix below describes the
+      following transformations:
+        Translates every X point by -50px
+        Translates every Y point by -100px
+        Translates every Z point by 0
+        Scales down by 10%
+    */
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -50, -100, 0, 1.1)
+      rotate(0deg);
+  }
+  30% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0.9);
+  }
+  to {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 100, 0, 1.1)
+      rotate(360deg);
+  }
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
