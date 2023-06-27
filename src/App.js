@@ -3,8 +3,8 @@ import "./App.css";
 import dollar from "../src/img/dollar.jpg";
 import aust from "./img/aust dollar.png";
 // import moneyTime from "./img/MoneyTime.png";
-import logo from "./img/logo.png";
 // import uah from "./img/uah.png";
+import Header from "../src/components/Header";
 
 export default function App() {
   const [amount, setAmount] = useState("");
@@ -24,15 +24,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <div class="blob-effect">
-        <span></span>
-        <span></span>
-        <span></span>
-        <div className="div-container" type="submit">
-          <h1>Money Time</h1>
-        </div>
-      </div>
-      <img src={logo} id="logo" />
+      <Header />
 
       {/* <img src={moneyTime} id="nameBand" /> */}
 
