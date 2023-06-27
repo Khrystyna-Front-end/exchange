@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/exchange/static/css/main.e05dcc88.css",
+    "main.js": "/exchange/static/js/main.112db4a2.js",
+    "static/js/787.fec58e52.chunk.js": "/exchange/static/js/787.fec58e52.chunk.js",
+    "static/media/uah.png": "/exchange/static/media/uah.e0fefeeaaebaf561e747.png",
+    "static/media/aust dollar.png": "/exchange/static/media/aust dollar.28ef08f04fe155e63d26.png",
+    "static/media/dollar.jpg": "/exchange/static/media/dollar.46dc8253dd1b3271e76a.jpg",
+    "static/media/logo.png": "/exchange/static/media/logo.c5e55c418ff32df747c9.png",
+    "index.html": "/exchange/index.html",
+    "main.e05dcc88.css.map": "/exchange/static/css/main.e05dcc88.css.map",
+    "main.112db4a2.js.map": "/exchange/static/js/main.112db4a2.js.map",
+    "787.fec58e52.chunk.js.map": "/exchange/static/js/787.fec58e52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e05dcc88.css",
+    "static/js/main.112db4a2.js"
+  ]
+}
