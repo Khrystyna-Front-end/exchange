@@ -1,10 +1,11 @@
 import React from "react";
 import logo from "../img/logo.png";
+import "./Header.css";
 
 export default function Header() {
   return (
     <div>
-      <div className="blob-effect text-center mx-auto">
+      <div className="blob-effect">
         <span></span>
         <span></span>
         <span></span>
